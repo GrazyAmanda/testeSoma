@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">	
+<hibernate-configuration>
+
+	<session-factory name="hibernateSessionFactory">
+		<!-- Postgres --> 
+		
+		<!-- Config Server -->
+		<!--
+		<property name="hibernate.connection.url">jdbc:postgresql://172.31.3.55:5432/juv-prod</property>
+		<property name="hibernate.connection.driver_class">org.postgresql.Driver</property>		
+		<property name="hibernate.connection.username">postgres</property>
+		<property name="hibernate.connection.password">2258,juvi</property> 
+		-->
+
+        <!-- Config Server (Homologação) -->
+        <!-- 
+	    <property name="hibernate.connection.url">jdbc:postgresql://172.31.3.64:5432/juv-homo</property>
+		<property name="hibernate.connection.driver_class">org.postgresql.Driver</property>		
+		<property name="hibernate.connection.username">postgres</property>
+		<property name="hibernate.connection.password">2258,juvi</property>	
+			-->
+
+		<!--  Config DEVS -->	
+	 	
+		<property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/juv</property>
+		<property name="hibernate.connection.driver_class">org.postgresql.Driver</property>		
+		<property name="hibernate.connection.username">postgres</property>
+		<property name="hibernate.connection.password">postgres</property>	 
+	
+				
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+
+		<property name="hibernate.connection.characterEncoding">UTF-8</property>
+		<property name="hibernate.c3p0.min_size">1</property>
+		<property name="hibernate.c3p0.max_size">60</property>
+		<property name="hibernate.c3p0.timeout">300</property>
+		<property name="hibernate.c3p0.idle_test_period">100</property>
+        <property name="defaultAutoCommit">false</property>
+		<property name="hibernate.current_session_context_class">thread</property>	
+		<property name="hibernate.generate_statistics">false</property>  
+		<property name="hibernate.show_sql">false</property>
+		<property name="hibernate.format_sql">false</property>		
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		<property name="connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>
+		<property name="hibernate.cache.provider_class">org.hibernate.cache.HashtableCacheProvider</property>		
+		
+		<mapping class="br.com.haras.model.AccessToken" />
+		<mapping class="br.com.haras.model.Aluno" />
+		<mapping class="br.com.haras.model.Anexo" />
+		<mapping class="br.com.haras.model.Boletim" />
+		<mapping class="br.com.haras.model.Badge" />
+		<mapping class="br.com.haras.model.Bairro" />
+		<mapping class="br.com.haras.model.Card" />
+		<mapping class="br.com.haras.model.Cidade" />
+		<mapping class="br.com.haras.model.Colegio" />
+		<mapping class="br.com.haras.model.Conteudo" />
+		<mapping class="br.com.haras.model.ConteudoUsuario" />
+		<mapping class="br.com.haras.model.ContratoGestao" />
+		<mapping class="br.com.haras.model.Curso" />
+		<mapping class="br.com.haras.model.Documento" />
+		<mapping class="br.com.haras.model.Endereco" />
+		<mapping class="br.com.haras.model.Equipamento" />
+		<mapping class="br.com.haras.model.Estado" />
+		<mapping class="br.com.haras.model.Evento" />
+		<mapping class="br.com.haras.model.EventoMapeado" />
+		<mapping class="br.com.haras.model.Escolas" />
+		<mapping class="br.com.haras.model.ExameMedico" />
+		<mapping class="br.com.haras.model.Frequencia" />
+		<mapping class="br.com.haras.model.Hashtag" />
+		<mapping class="br.com.haras.model.Local" />
+		<mapping class="br.com.haras.model.Matricula" />
+		<mapping class="br.com.haras.model.Medalha" />
+		<mapping class="br.com.haras.model.MedalhaUsuario" />
+		<mapping class="br.com.haras.model.Meta" />
+		<mapping class="br.com.haras.model.Nota" />
+		<mapping class="br.com.haras.model.Noticia" />
+		<mapping class="br.com.haras.model.Perfil" />
+		<mapping class="br.com.haras.model.PlanoAula" />
+		<mapping class="br.com.haras.model.PlanoEnsino" />
+		<mapping class="br.com.haras.model.Prefs" />
+		<mapping class="br.com.haras.model.Professor" />
+		<mapping class="br.com.haras.model.Programa" />
+		<mapping class="br.com.haras.model.Profissional" />
+		<mapping class="br.com.haras.model.ProgramaProfissional" />
+		<mapping class="br.com.haras.model.Ranking" />
+		<mapping class="br.com.haras.model.RankingItem" />
+		<mapping class="br.com.haras.model.RespostasUsuarioPippj"/>
+		<mapping class="br.com.haras.model.SituacaoEscolar" />
+		<mapping class="br.com.haras.model.SituacaoFamiliar" />
+		<mapping class="br.com.haras.model.SituacaoFinanceira" />
+		<mapping class="br.com.haras.model.Telefone" />
+		<mapping class="br.com.haras.model.Turma" />
+		<mapping class="br.com.haras.model.TurmaPresenca" />
+		<mapping class="br.com.haras.model.TurmaDia" />
+		<mapping class="br.com.haras.model.Usuario" />
+		<mapping class="br.com.haras.model.UsuarioBadges" />
+		<mapping class="br.com.haras.model.UsuarioEvento" />
+		<mapping class="br.com.haras.model.Parente" />
+		<mapping class="br.com.haras.model.TermoResponsabilidade" />
+		<mapping class="br.com.haras.model.EscolaAluno" />
+		<mapping class="br.com.haras.model.ContadorAcadEnem" />
+		<mapping class="br.com.haras.model.ProfissionalEquipamento" />
+		<mapping class="br.com.haras.model.ProgramaEquipamento" />
+		<mapping class="br.com.haras.model.EntregaMaterial" />
+		<mapping class="br.com.haras.model.CadastroReserva" />
+		<mapping class="br.com.haras.model.SimuladoAE" />
+		<mapping class="br.com.haras.model.Calendario"/>
+		<mapping class="br.com.haras.model.DiaCalendario"/>
+		<mapping class="br.com.haras.model.CursoMetas"/>
+		<mapping class="br.com.haras.model.Biblioteca"/>
+		<mapping class="br.com.haras.model.Acolhimento"/>
+		<mapping class="br.com.haras.model.Retorno"/>
+		<mapping class="br.com.haras.model.Edital"/>
+		<mapping class="br.com.haras.model.EditalPergunta"/>
+		<mapping class="br.com.haras.model.EditalCronograma"/>
+		<mapping class="br.com.haras.model.EditalMatriculas"/>
+		<mapping class="br.com.haras.model.EditalResposta"/>
+		<mapping class="br.com.haras.model.Equipe"/>
+		<mapping class="br.com.haras.model.EquipeCategoria"/>
+		<mapping class="br.com.haras.model.EquipeSubCategoria"/>
+		<mapping class="br.com.haras.model.EquipeIntegrante"/>
+		<mapping class="br.com.haras.model.EventoRelatorio"/>
+		<mapping class="br.com.haras.model.Psicossocial"/>
+		<mapping class="br.com.haras.model.AcademiaEnemAluno" />
+		<mapping class="br.com.haras.model.AcademiaEnemCronograma" />
+		<mapping class="br.com.haras.model.AcademiaEnemDiario" />
+		<mapping class="br.com.haras.model.AcademiaEnemAgendamentoDiario" />
+		<mapping class="br.com.haras.model.AcademiaEnemEntregaKit" />
+		<mapping class="br.com.haras.model.Saude"/>
+		<mapping class="br.com.haras.model.Testagem"/>
+		<mapping class="br.com.haras.model.AbordagemSocial"/>
+	</session-factory>
+</hibernate-configuration>
